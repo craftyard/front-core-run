@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { WorkshopComponent } from 'workshop/entities/workshop/component';
 import { WorkshopRoutingModule } from 'workshop/router';
 import { AppModule } from 'app/module';
+import { WorkshopApi } from './shared/backend-api/workshop-api.service';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,9 @@ import { AppModule } from 'app/module';
     CommonModule,
     WorkshopRoutingModule,
     AppModule,
+  ],
+  providers: [
+    WorkshopApi,
   ],
 })
 export class WorkshopModule { }

@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
-    "https://github.com/soul-workshop/domain": "https://github.com/soul-workshop/domain",
+    "workshop-domain": "https://github.com/soul-workshop/domain#feature/get-my-workshop-uc-params",
     "rxjs": "~7.8.0",
     "soul-workshop/rilata2": "soul-workshop/rilata2",
     "tslib": "^2.3.0",
