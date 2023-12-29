@@ -25,6 +25,7 @@ import { AccordionComponent } from 'app/shared/ui-kit/accordion/component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 import { AuthInterceptor } from './shared/interceptor/auth.interceptor';
 
 const domainModuleStates: DomainModuleState[] = [
@@ -58,6 +59,7 @@ const domainModuleStates: DomainModuleState[] = [
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatMenuModule,
   ],
   providers: [AppState, AuthGuard, {
     provide: 'domainModuleStates', useValue: domainModuleStates,
@@ -75,6 +77,8 @@ const domainModuleStates: DomainModuleState[] = [
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatMenuModule,
   ],
 })
 export class AppModule { }
