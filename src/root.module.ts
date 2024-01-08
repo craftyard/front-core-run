@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RootComponent } from 'component';
 import { AppRoutingModule } from 'router';
 import { SubjectApi } from 'subject/shared/backend-api/subject-api.service';
+import { ConsoleLogger } from 'rilata/src/common/logger/console-logger';
 
 @NgModule({
   declarations: [
@@ -18,8 +19,10 @@ import { SubjectApi } from 'subject/shared/backend-api/subject-api.service';
     HttpClientModule,
   ],
   bootstrap: [RootComponent],
-  providers: [{
-    provide: 'subjectApi', useClass: SubjectApi,
-  }],
+  providers: [
+    { provide: 'logger', useClass: ConsoleLogger },
+    {
+      provide: 'userAuthApi', useClass: SubjectApi,
+    }],
 })
 export class RootModule { }
